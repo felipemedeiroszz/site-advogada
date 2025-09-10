@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,7 +24,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <h1>Dra. Thatiane Leme</h1>
-                <span>Advocacia OAB/SP 123.456</span>
+                <span>Advocacia </span>
             </div>
             
             <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -48,17 +48,17 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-text">Advocacia de Excelência</span>
+                    <span class="badge-text">OAB/SP 123.456</span>
                     <div class="badge-shine"></div>
                 </div>
                 
                 <h1 class="hero-title">
-                    <span class="title-line">Defendendo seus</span>
-                    <span class="title-line highlight-text">Direitos</span>
-                    <span class="title-line">com Expertise</span>
+                    <span class="title-line">Excelência em</span>
+                    <span class="title-line highlight-text">Advocacia</span>
+                    <span class="title-line">Tributária e Previdenciária</span>
                 </h1>
                 
-                <p class="hero-subtitle" data-typing="10 anos de experiência em direito tributário e previdenciário, transformando complexidades jurídicas em resultados efetivos"></p>
+                <p class="hero-subtitle" data-typing="Mais de 10 anos de experiência especializada em direito tributário e previdenciário, oferecendo soluções jurídicas estratégicas e personalizadas para proteger seus direitos e interesses."></p>
                 
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -261,18 +261,23 @@
             
             <div class="contact-content">
                 <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3>Vamos Conversar?</h3>
+                        <p>Entre em contato conosco para uma consulta personalizada. Estamos prontos para ajudar você a resolver suas questões jurídicas com a expertise que você merece.</p>
+                    </div>
+                    
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Endereço</h4>
-                            <p>Av. Orestes Quercia, 1000 - Sala 1501<br>São Joaquim da barra - São Paulo - SP<br>CEP: 14600-000</p>
+                            <h4>Nosso Escritório</h4>
+                            <p>Av. Orestes Quercia, 1000 - Sala 1501<br>São Joaquim da Barra - São Paulo - SP<br>CEP: 14600-000</p>
                         </div>
                     </div>
                     
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h4>Telefone</h4>
+                            <h4>Telefone & WhatsApp</h4>
                             <p>(16) 99134-0113</p>
                         </div>
                     </div>
@@ -280,7 +285,7 @@
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>E-mail</h4>
+                            <h4>E-mail Profissional</h4>
                             <p>contato@thatianeleme.com.br</p>
                         </div>
                     </div>
@@ -295,38 +300,51 @@
                 </div>
                 
                 <form class="contact-form" aria-label="Formulário de contato">
+                    <div class="contact-form-header">
+                        <h3>Solicite sua Consulta</h3>
+                        <p>Preencha o formulário abaixo e entraremos em contato em até 24 horas</p>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required aria-required="true">
+                        <input type="text" id="nome" name="nome" required aria-required="true" placeholder="Seu nome completo">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required aria-required="true">
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="seu@email.com">
                     </div>
                     
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone">
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                     </div>
                     
                     <div class="form-group">
-                        <label for="assunto">Assunto *</label>
+                        <label for="assunto">Área de Interesse *</label>
                         <select id="assunto" name="assunto" required aria-required="true">
-                            <option value="">Selecione um assunto</option>
+                            <option value="">Selecione uma área</option>
                             <option value="tributario">Direito Tributário</option>
                             <option value="previdenciario">Direito Previdenciário</option>
-                            <option value="consultoria">Consultoria</option>
-                            <option value="outro">Outro</option>
+                            <option value="consultoria">Consultoria Jurídica</option>
+                            <option value="outro">Outra área</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="mensagem">Mensagem *</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true" placeholder="Descreva brevemente sua situação..."></textarea>
+                        <label for="mensagem">Descreva sua Situação *</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true" placeholder="Conte-nos brevemente sobre sua situação ou dúvida jurídica..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    <div class="form-submit-wrapper">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Enviar Solicitação</span>
+                        </button>
+                        <div class="form-note">
+                            <i class="fas fa-shield-alt"></i>
+                            Suas informações são tratadas com total confidencialidade
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
