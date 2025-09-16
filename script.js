@@ -91,19 +91,27 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const formObject = {};
             formData.forEach((value, key) => {
-                formObject[key] = value;
+                formObject[key] = value.trim();
             });
             
             // Validate form
             if (validateForm(formObject)) {
-                // Show success message
-                showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                // Build WhatsApp Click-to-Chat URL in requested format
+                const numero = '5516991340113';
+                const partes = [
+                    formObject.nomecompleto || '',
+                    formObject.email || '',
+                    formObject.telefone || '',
+                    formObject.areadeinteresse || '',
+                    formObject.situacao || ''
+                ].map(v => encodeURIComponent(v));
                 
-                // Reset form
-                this.reset();
+                // Join with plus signs between fields
+                const texto = partes.join('+');
+                const url = `https://wa.me/${numero}?text=${texto}`;
                 
-                // In a real application, you would send the data to a server
-                console.log('Form data:', formObject);
+                // Open WhatsApp in a new tab/window
+                window.open(url, '_blank');
             }
         });
         
@@ -123,30 +131,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== FORM VALIDATION ===== 
     function validateForm(data) {
         let isValid = true;
-        const errors = [];
         
         // Required fields validation
-        if (!data.nome || data.nome.trim().length < 2) {
-            errors.push('Nome deve ter pelo menos 2 caracteres');
-            showFieldError('nome', 'Nome deve ter pelo menos 2 caracteres');
+        if (!data.nomecompleto || data.nomecompleto.trim().length < 2) {
+            showFieldError('nomecompleto', 'Nome deve ter pelo menos 2 caracteres');
             isValid = false;
         }
         
         if (!data.email || !isValidEmail(data.email)) {
-            errors.push('E-mail inválido');
             showFieldError('email', 'Por favor, insira um e-mail válido');
             isValid = false;
         }
         
-        if (!data.assunto) {
-            errors.push('Assunto é obrigatório');
-            showFieldError('assunto', 'Por favor, selecione um assunto');
+        if (!data.telefone || data.telefone.trim().length < 8) {
+            showFieldError('telefone', 'Por favor, insira um telefone válido');
             isValid = false;
         }
         
-        if (!data.mensagem || data.mensagem.trim().length < 10) {
-            errors.push('Mensagem deve ter pelo menos 10 caracteres');
-            showFieldError('mensagem', 'Mensagem deve ter pelo menos 10 caracteres');
+        if (!data.areadeinteresse) {
+            showFieldError('areadeinteresse', 'Por favor, selecione uma área de interesse');
+            isValid = false;
+        }
+        
+        if (!data.situacao || data.situacao.trim().length < 5) {
+            showFieldError('situacao', 'Descreva brevemente sua situação (min. 5 caracteres)');
             isValid = false;
         }
         
@@ -162,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         
         switch (field.name) {
-            case 'nome':
+            case 'nomecompleto':
                 if (!value || value.length < 2) {
                     showFieldError(field.name, 'Nome deve ter pelo menos 2 caracteres');
                     isValid = false;
@@ -174,15 +182,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     isValid = false;
                 }
                 break;
-            case 'assunto':
-                if (!value) {
-                    showFieldError(field.name, 'Por favor, selecione um assunto');
+            case 'telefone':
+                if (!value || value.length < 8) {
+                    showFieldError(field.name, 'Por favor, insira um telefone válido');
                     isValid = false;
                 }
                 break;
-            case 'mensagem':
-                if (!value || value.length < 10) {
-                    showFieldError(field.name, 'Mensagem deve ter pelo menos 10 caracteres');
+            case 'areadeinteresse':
+                if (!value) {
+                    showFieldError(field.name, 'Por favor, selecione uma área de interesse');
+                    isValid = false;
+                }
+                break;
+            case 'situacao':
+                if (!value || value.length < 5) {
+                    showFieldError(field.name, 'Descreva brevemente sua situação (min. 5 caracteres)');
                     isValid = false;
                 }
                 break;

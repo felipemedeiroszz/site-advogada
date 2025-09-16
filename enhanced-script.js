@@ -302,5 +302,110 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize typing animation after other animations
     setTimeout(initTypingAnimation, 3000);
     
+    // ===== FLOATING WHATSAPP MESSAGES ROTATION =====
+    // Rotate 12 total messages across 4 floating bubbles (3 each), switching on every animationiteration (blink).
+    (function initFloatingMessagesRotation() {
+        const cellImage = document.querySelector('.cell-image');
+
+        function buzzPhone() {
+            if (!cellImage) return;
+            // Restart animation by toggling the class
+            cellImage.classList.remove('buzz');
+            // Force reflow to allow re-adding the class
+            void cellImage.offsetWidth;
+            cellImage.classList.add('buzz');
+            const onEnd = () => {
+                cellImage.classList.remove('buzz');
+                cellImage.removeEventListener('animationend', onEnd);
+            };
+            cellImage.addEventListener('animationend', onEnd);
+        }
+
+        const bubbles = [
+            document.querySelector('.floating-message-1'),
+            document.querySelector('.floating-message-2'),
+            document.querySelector('.floating-message-3'),
+            document.querySelector('.floating-message-4')
+        ].filter(Boolean);
+
+        if (!bubbles.length) return;
+
+        // Define 12 messages (Portuguese examples; adjust as needed)
+        const messages = [
+            'Olá! Preciso de ajuda jurídica',
+            'Tenho dúvidas sobre aposentadoria',
+            'Como funciona a revisão de benefícios?',
+            'Fui autuado e preciso de orientação',
+            'É possível recuperar créditos tributários?',
+            'Quais documentos preciso enviar?',
+            'Muito obrigada pelo atendimento!',
+            'Excelente advogada!',
+            'Resolveu meu caso rapidamente',
+            'Atendimento ágil e profissional',
+            'Recomendo o escritório',
+            'Podemos marcar uma consulta?'
+        ];
+
+        // Split into 4 groups of 3
+        const groups = [
+            messages.slice(0, 3),
+            messages.slice(3, 6),
+            messages.slice(6, 9),
+            messages.slice(9, 12)
+        ];
+
+        bubbles.forEach((bubble, idx) => {
+            const contentEl = bubble.querySelector('.message-content');
+            const timeEl = bubble.querySelector('.message-time');
+            const group = groups[idx] || [];
+            if (!contentEl || group.length === 0) return;
+
+            // Set initial message to first of the group
+            let shown = 1;
+            contentEl.textContent = group[0];
+
+            // Helper to generate a subtle time string (HH:MM)
+            function formatTime(d) {
+                const h = String(d.getHours()).padStart(2, '0');
+                const m = String(d.getMinutes()).padStart(2, '0');
+                return `${h}:${m}`;
+            }
+
+            if (timeEl) {
+                timeEl.textContent = formatTime(new Date());
+            }
+
+            // Ensure phone vibrates for the very first appearance as well
+            let firstBuzzed = false;
+            const onStart = () => {
+                if (!firstBuzzed) {
+                    buzzPhone();
+                    firstBuzzed = true;
+                }
+            };
+
+            // On each animation cycle, advance message within the group
+            function onIter() {
+                if (shown >= 3) {
+                    // After 3 messages, stop changing to keep the last one
+                    bubble.removeEventListener('animationiteration', onIter);
+                    bubble.removeEventListener('animationstart', onStart);
+                    return;
+                }
+                contentEl.textContent = group[shown];
+                if (timeEl) timeEl.textContent = formatTime(new Date());
+                shown += 1;
+                // Trigger phone buzz when a new message appears
+                buzzPhone();
+            }
+
+            // Listen to animation iteration from the animated element
+            bubble.addEventListener('animationiteration', onIter);
+            bubble.addEventListener('animationstart', onStart, { once: false });
+            // Also buzz immediately upon initial setup to guarantee first message feedback
+            buzzPhone();
+        });
+    })();
+
     console.log('Advanced animations and interactions loaded successfully!');
 });
