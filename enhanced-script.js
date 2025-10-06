@@ -407,5 +407,221 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     })();
 
+    // ===== ENHANCED ABOUT SECTION SLIDESHOW =====
+    function initAboutSlideshow() {
+        const slideshowImg = document.getElementById('about-slideshow-img');
+        const indicatorsContainer = document.querySelector('.slideshow-indicators');
+        const progressBar = document.querySelector('.progress-bar');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        if (!slideshowImg || !indicatorsContainer || !progressBar) return;
+
+        // Array of all images in the sobre-mim folder
+        const images = [
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.24.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.25.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.26.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.27.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.28 (1).jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.28.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.29 (1).jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.29 (2).jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.29.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.30.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.20.31.jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.25.23 (1).jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.25.23 (2).jpeg',
+            'sobre-mim/WhatsApp Image 2025-10-03 at 10.25.23.jpeg'
+        ];
+
+        let currentImageIndex = 0;
+        let autoSlideInterval;
+        let progressInterval;
+        let isTransitioning = false;
+        const transitionDuration = 3000; // 3 seconds per image
+        const transitionTypes = ['fade', 'zoom', 'slide'];
+
+        // Create indicators
+        function createIndicators() {
+            indicatorsContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = `indicator-dot ${index === 0 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(dot);
+            });
+        }
+
+        // Update indicators
+        function updateIndicators() {
+            const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            let progress = 0;
+            progressInterval = setInterval(() => {
+                progress += 100 / (transitionDuration / 100);
+                progressBar.style.width = `${Math.min(progress, 100)}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '0%';
+                }
+            }, 100);
+        }
+
+        // Apply transition effect
+        function applyTransition(type) {
+            slideshowImg.classList.add(`${type}-transition`);
+            
+            setTimeout(() => {
+                slideshowImg.src = images[currentImageIndex];
+                slideshowImg.alt = `Sobre Thatiane Leme - Foto ${currentImageIndex + 1}`;
+                
+                setTimeout(() => {
+                    slideshowImg.classList.remove(`${type}-transition`);
+                    isTransitioning = false;
+                }, 100);
+            }, 400);
+        }
+
+        // Change to specific slide
+        function goToSlide(index) {
+            if (isTransitioning || index === currentImageIndex) return;
+            
+            isTransitioning = true;
+            currentImageIndex = index;
+            
+            // Clear intervals
+            clearInterval(autoSlideInterval);
+            clearInterval(progressInterval);
+            progressBar.style.width = '0%';
+            
+            // Apply random transition
+            const transitionType = transitionTypes[Math.floor(Math.random() * transitionTypes.length)];
+            applyTransition(transitionType);
+            
+            updateIndicators();
+            
+            // Restart auto slide
+            setTimeout(() => {
+                startAutoSlide();
+            }, 800);
+        }
+
+        // Go to next slide
+        function nextSlide() {
+            const nextIndex = (currentImageIndex + 1) % images.length;
+            goToSlide(nextIndex);
+        }
+
+        // Go to previous slide
+        function prevSlide() {
+            const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+            goToSlide(prevIndex);
+        }
+
+        // Start auto slide
+        function startAutoSlide() {
+            updateProgressBar();
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, transitionDuration);
+        }
+
+        // Stop auto slide
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+            clearInterval(progressInterval);
+        }
+
+        // Event listeners
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+            });
+        }
+
+        // Pause on hover
+        const slideshow = document.querySelector('.about-slideshow');
+        if (slideshow) {
+            slideshow.addEventListener('mouseenter', stopAutoSlide);
+            slideshow.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Initialize
+        createIndicators();
+        startAutoSlide();
+
+        // Add entrance animation to about section
+        const aboutSection = document.querySelector('.about');
+        if (aboutSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(aboutSection);
+        }
+    }
+
+    // Initialize slideshow
+    initAboutSlideshow();
+
+    // ===== EXPANDABLE ARTICLES FUNCTIONALITY =====
+    function initExpandableArticles() {
+        const articleToggleButtons = document.querySelectorAll('.article-toggle');
+        
+        articleToggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const articleCard = this.closest('.article-card');
+                const fullContent = articleCard.querySelector('.article-full-content');
+                const summary = articleCard.querySelector('.article-summary');
+                
+                if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+                    // Expand article
+                    fullContent.style.display = 'block';
+                    summary.style.display = 'none';
+                    this.textContent = 'Ver Menos';
+                    
+                    // Smooth scroll to article if needed
+                    articleCard.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                } else {
+                    // Collapse article
+                    fullContent.style.display = 'none';
+                    summary.style.display = 'block';
+                    this.textContent = 'Ver Mais';
+                }
+            });
+        });
+    }
+
+    // Initialize expandable articles
+    initExpandableArticles();
+
     console.log('Advanced animations and interactions loaded successfully!');
 });

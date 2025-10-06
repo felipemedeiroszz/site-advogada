@@ -3,7 +3,7 @@
     position: fixed;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--gold-accent);
+    border: 2px solid var(--medium-gray);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -15,7 +15,7 @@
     position: fixed;
     width: 4px;
     height: 4px;
-    background: var(--gold-accent);
+    background: var(--medium-gray);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -25,14 +25,14 @@
 .custom-cursor.cursor-hover {
     width: 60px;
     height: 60px;
-    background: rgba(214, 158, 46, 0.1);
-    border-color: var(--copper-accent);
+    background: rgba(229, 229, 229, 0.1);
+    border-color: var(--accent-navy);
 }
 
 .cursor-dot.cursor-hover {
     width: 8px;
     height: 8px;
-    background: var(--copper-accent);
+    background: var(--accent-navy);
 }
 
 /* ===== PARTICLES SYSTEM ===== */
@@ -50,7 +50,7 @@
     position: absolute;
     width: 2px;
     height: 2px;
-    background: rgba(214, 158, 46, 0.6);
+    background: rgba(229, 229, 229, 0.6);
     border-radius: 50%;
     animation: particleFloat 15s linear infinite;
 }
@@ -79,7 +79,7 @@
     left: 0;
     width: 0%;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(90deg, var(--medium-gray), var(--accent-navy));
     z-index: 1001;
     transition: width 0.1s ease;
 }
@@ -100,7 +100,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(90deg, var(--medium-gray), var(--accent-navy));
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -187,7 +187,7 @@
     position: absolute;
     width: 100px;
     height: 100px;
-    background: linear-gradient(45deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(45deg, var(--medium-gray), var(--accent-navy));
     opacity: 0.1;
     animation: morph 8s ease-in-out infinite;
 }
@@ -238,27 +238,27 @@
 /* ===== NEON GLOW EFFECTS ===== */
 .neon-glow {
     text-shadow: 
-        0 0 5px var(--gold-accent),
-        0 0 10px var(--gold-accent),
-        0 0 15px var(--gold-accent),
-        0 0 20px var(--gold-accent);
+        0 0 5px var(--medium-gray),
+        0 0 10px var(--medium-gray),
+        0 0 15px var(--medium-gray),
+        0 0 20px var(--medium-gray);
     animation: neonFlicker 2s ease-in-out infinite alternate;
 }
 
 @keyframes neonFlicker {
     0%, 100% {
         text-shadow: 
-            0 0 5px var(--gold-accent),
-            0 0 10px var(--gold-accent),
-            0 0 15px var(--gold-accent),
-            0 0 20px var(--gold-accent);
+            0 0 5px var(--medium-gray),
+            0 0 10px var(--medium-gray),
+            0 0 15px var(--medium-gray),
+            0 0 20px var(--medium-gray);
     }
     50% {
         text-shadow: 
-            0 0 2px var(--gold-accent),
-            0 0 5px var(--gold-accent),
-            0 0 8px var(--gold-accent),
-            0 0 12px var(--gold-accent);
+            0 0 2px var(--medium-gray),
+            0 0 5px var(--medium-gray),
+            0 0 8px var(--medium-gray),
+            0 0 12px var(--medium-gray);
     }
 }
 

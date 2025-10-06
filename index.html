@@ -37,7 +37,8 @@
             <ul class="nav-menu" role="menubar">
                 <li role="none"><a href="#home" role="menuitem">Home</a></li>
                 <li role="none"><a href="#sobre" role="menuitem">Sobre</a></li>
-                <li role="none"><a href="#servicos" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="#atuacao" role="menuitem">Minha Atuação</a></li>
+                <li role="none"><a href="#missao-visao-valores" role="menuitem">Nossos Pilares</a></li>
                 <li role="none"><a href="#artigos" role="menuitem">Artigos</a></li>
                 <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
             </ul>
@@ -49,7 +50,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-text">OAB/SP 123.456</span>
+                    <span class="badge-text">OAB/SP 431.971</span>
                     <div class="badge-shine"></div>
                 </div>
                 
@@ -59,7 +60,7 @@
                     <span class="title-line">Tributária e Previdenciária</span>
                 </h1>
                 
-                <p class="hero-subtitle" data-typing="Mais de 10 anos de experiência especializada em direito tributário e previdenciário, oferecendo soluções jurídicas estratégicas e personalizadas para proteger seus direitos e interesses."></p>
+
                 
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -77,22 +78,20 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="#servicos" class="btn btn-secondary">
-                        <span class="btn-text">Conhecer Serviços</span>
+                    <a href="#atuacao" class="btn btn-secondary">
+                        <span class="btn-text">Conhecer Minha Atuação</span>
                         <i class="fas fa-arrow-right btn-arrow"></i>
                     </a>
                 </div>
             </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-text">Role para descobrir</div>
-            <div class="scroll-arrow">
-                <div class="arrow-line"></div>
-                <div class="arrow-head"></div>
+            
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <img src="dra.png" alt="Dra. Thatiane Leme - Advocacia Tributária e Previdenciária" class="hero-main-image">
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- About Section -->
@@ -105,24 +104,38 @@
             
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">Com mais de 10 anos de experiência em direito tributário e previdenciário, dedico minha carreira a oferecer soluções jurídicas personalizadas e eficazes para pessoas físicas e jurídicas.</p>
+                    <p class="about-intro">Sou Thatiane Leme, advogada que respira o Direito há mais de 10 anos. Minha trajetória começou cedo: dos 19 aos 25 anos atuei em um escritório especializado em Direito Previdenciário, onde aprendi na prática a importância da advocacia em transformar vidas, especialmente no momento em que o cliente conquista sua tão sonhada aposentadoria ou benefício.</p>
                     
                     <div class="about-details">
-                        <h3>Formação Acadêmica</h3>
-                        <ul>
-                            <li>Graduação em Direito pela Universidade de São Paulo (USP)</li>
-                            <li>Pós-graduação em Direito Tributário pela FGV</li>
-                            <li>Especialização em Direito Previdenciário pela PUC-SP</li>
-                        </ul>
+                        <h3>Minha Trajetória</h3>
+                        <p>Hoje, sigo meu propósito com dedicação e experiência, sendo sócia em um escritório full service na Rua Sergipe, 1447, com foco em Previdenciário e Trabalhista. Além disso, neste ano estamos em plena expansão com um segundo espaço, na Rua Sergipe, 1486, voltado ao Tributário e Empresarial, oferecendo suporte completo para pessoas e empresas.</p>
                         
-                        <h3>Filosofia do Escritório</h3>
-                        <p>Acredito que cada cliente merece atenção personalizada e estratégias jurídicas sob medida. Meu compromisso é transformar complexidades legais em soluções claras e resultados efetivos.</p>
+                        <h3>Minha Filosofia</h3>
+                        <p>Acredito que a fé é um dos maiores diferenciais na minha advocacia: ela me guia a trabalhar com ética, empatia e coragem diante dos desafios. Cada cliente que confia em mim recebe não apenas orientação jurídica, mas também comprometimento humano.</p>
                     </div>
                 </div>
                 
                 <div class="about-image">
-                    <div class="about-placeholder">
-                        <i class="fas fa-user-tie"></i>
+                    <div class="about-slideshow">
+                        <div class="slideshow-container">
+                            <img id="about-slideshow-img" src="sobre-mim/WhatsApp Image 2025-10-03 at 10.20.24.jpeg" alt="Sobre Thatiane Leme" class="slideshow-image">
+                            <div class="slideshow-overlay">
+                                <div class="slideshow-controls">
+                                    <button class="slideshow-btn prev-btn" aria-label="Imagem anterior">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="slideshow-btn next-btn" aria-label="Próxima imagem">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slideshow-indicators">
+                            <!-- Indicators will be generated by JavaScript -->
+                        </div>
+                        <div class="slideshow-progress">
+                            <div class="progress-bar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,47 +143,15 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="services">
+    <section id="atuacao" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Áreas de Atuação</h2>
-                <p class="section-subtitle">Soluções especializadas para suas necessidades jurídicas</p>
+                <h2 class="section-title">Minha Atuação</h2>
+                <p class="section-subtitle">Com mais de 10 anos de experiência, oferecemos soluções jurídicas completas e humanizadas</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card" data-tilt>
-                    <div class="service-bg-pattern"></div>
-                    <div class="service-icon">
-                        <div class="icon-bg"></div>
-                        <i class="fas fa-calculator"></i>
-                        <div class="icon-pulse"></div>
-                    </div>
-                    <h3>Direito Tributário</h3>
-                    <p>Estratégias inteligentes para otimização fiscal, defesa contra autuações e recuperação de valores pagos indevidamente.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                            <span>Planejamento Tributário</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-shield"></i></div>
-                            <span>Defesa em Autuações</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-coins"></i></div>
-                            <span>Recuperação de Créditos</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
-                            <span>Consultoria Especializada</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-cta-wrapper">
-                    </div>
-                </div>
-                
+                <!-- Direito Previdenciário -->
                 <div class="service-card" data-tilt>
                     <div class="service-bg-pattern"></div>
                     <div class="service-icon">
@@ -179,62 +160,336 @@
                         <div class="icon-pulse"></div>
                     </div>
                     <h3>Direito Previdenciário</h3>
-                    <p>Garantindo seus direitos junto ao INSS com acompanhamento personalizado e estratégias eficazes para cada caso.</p>
+                    <p>Muitas pessoas deixam de receber aposentadoria, pensão ou benefícios por incapacidade simplesmente por falta de orientação adequada. Ajudo clientes a garantirem tudo a que têm direito, de forma rápida, segura e sem burocracia desnecessária.</p>
                     
                     <div class="service-features">
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-user-clock"></i></div>
-                            <span>Aposentadorias</span>
+                            <span>Aposentadoria por idade ou tempo de contribuição</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-star"></i></div>
+                            <span>Aposentadoria especial</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-heart"></i></div>
-                            <span>Pensões por Morte</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-medkit"></i></div>
-                            <span>Auxílio-Doença</span>
+                            <span>Pensão por morte</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
-                            <span>Revisão de Benefícios</span>
+                            <span>Auxílios e revisões de benefícios</span>
                         </div>
                     </div>
+                </div>
+
+                <!-- Benefícios Previdenciários -->
+                <div class="service-card" data-tilt>
+                    <div class="service-bg-pattern"></div>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-clipboard-list"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <h3>Todos os Benefícios Previdenciários</h3>
+                    <p>Garantir seus direitos é nossa prioridade. Atuamos em todos os benefícios do INSS, cuidando de cada etapa com atenção, dedicação e humanização.</p>
                     
-                    <div class="service-cta-wrapper">
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <span>Aposentadoria por idade</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                            <span>Aposentadoria por tempo de contribuição</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-star"></i></div>
+                            <span>Aposentadoria especial</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-wheelchair"></i></div>
+                            <span>Aposentadoria PCD</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <span>Pensão por morte</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-medkit"></i></div>
+                            <span>Benefícios por incapacidade</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <span>Auxílios diversos</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                            <span>Revisões de benefícios</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direito Empresarial e Tributário -->
+                <div class="service-card" data-tilt>
+                    <div class="service-bg-pattern"></div>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-building"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <h3>Direito Empresarial e Tributário</h3>
+                    <p>Protegendo empresas e garantindo segurança jurídica. Com anos de experiência e contato direto com empresários da região, oferecemos soluções estratégicas, eficientes e personalizadas.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <span>Planejamento Tributário e Compliance</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                            <span>Consultoria Empresarial e Societária</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                            <span>Assessoria em contratos e acordos comerciais</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield"></i></div>
+                            <span>Revisão e defesa em questões fiscais</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                            <span>Orientação sobre a Reforma Tributária</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <span>Expansão e proteção estratégica de negócios</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direito Trabalhista e Civil -->
+                <div class="service-card" data-tilt>
+                    <div class="service-bg-pattern"></div>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-gavel"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <h3>Direito Trabalhista e Civil</h3>
+                    <p>Defendendo direitos com dedicação e confiança. Com experiência e compromisso, oferecemos soluções eficientes, estratégicas e humanizadas, garantindo que cada cliente tenha seus direitos protegidos.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <span>Reclamações e defesas trabalhistas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                            <span>Acordos e negociações coletivas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <span>Direito do consumidor</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                            <span>Contratos e obrigações civis</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                            <span>Revisões e cobranças</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                            <span>Assessoria em litígios e mediações</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Mission, Vision and Values Section -->
+    <section id="missao-visao-valores" class="mission-vision-values">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Pilares</h2>
+                <p class="section-subtitle">Os fundamentos que guiam nossa advocacia</p>
+            </div>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card mission-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Missão</h3>
+                    <p>Oferecer serviços jurídicos completos com excelência e atendimento humanizado, transformando vidas e fortalecendo empresas em Previdenciário, Trabalhista, Tributário e Empresarial.</p>
+                </div>
+                
+                <div class="mvv-card vision-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Visão</h3>
+                    <p>Ser referência regional em advocacia full service, reconhecida por resultados consistentes, confiança e cuidado humano inspirado na fé.</p>
+                </div>
+                
+                <div class="mvv-card values-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li><i class="fas fa-pray"></i> Fé e Propósito</li>
+                        <li><i class="fas fa-balance-scale"></i> Ética e Transparência</li>
+                        <li><i class="fas fa-handshake"></i> Comprometimento</li>
+                        <li><i class="fas fa-award"></i> Excelência Técnica</li>
+                        <li><i class="fas fa-users"></i> Humanização</li>
+                        <li><i class="fas fa-heart-pulse"></i> Proximidade e Confiança</li>
+                        <li><i class="fas fa-chess"></i> Visão Estratégica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Articles Section -->
     <section id="artigos" class="articles">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Artigos e Insights</h2>
+                <h2 class="section-title">Artigos </h2>
                 <p class="section-subtitle">Mantenha-se informado sobre as últimas mudanças na legislação</p>
             </div>
             
             <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-date">15 Nov 2024</div>
-                    <h3>Mudanças na Legislação Tributária 2024</h3>
-                    <p>Análise das principais alterações que impactam empresas e pessoas físicas no novo ano fiscal.</p>
-                    <a href="#" class="article-link">Ler Artigo</a>
+                <article class="article-card" data-article="previdencia">
+                    <div class="article-date">20 Jan 2025</div>
+                    <h3>Previdência: Transformando Vidas com Humanidade e Benefícios Reais</h3>
+                    <p class="article-summary">Reflexões sobre a importância da advocacia previdenciária na transformação de vidas e na garantia de direitos fundamentais dos segurados.</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>Desde o início da minha trajetória no Direito, descobri que não existe recompensa maior do que mudar a vida das pessoas. Nada me alegra mais do que ver meus clientes conquistando sua aposentadoria, pensão ou benefícios por incapacidade, recebendo a segurança e a dignidade que merecem após anos de trabalho e dedicação.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/previdencia/WhatsApp Image 2025-10-03 at 09.59.19.jpeg" alt="Advocacia Previdenciária - Atendimento humanizado" class="article-image">
+                            <img src="artigos/previdencia/WhatsApp Image 2025-10-03 at 10.25.23.jpeg" alt="Direito Previdenciário - Transformando vidas" class="article-image">
+                        </div>
+                        
+                        <p>Sempre tive um carinho especial pela terceira idade. Cresci aprendendo com a sabedoria dos meus avós e vizinhos mais velhos, admirando sua paciência e experiência. Essa conexão me ensinou a olhar para cada pessoa com respeito e humanidade, algo que levo para todos os meus clientes.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/previdencia/1.jpeg" alt="Cuidado e atenção aos idosos" class="article-image">
+                            <img src="artigos/previdencia/WhatsApp Image 2025-10-03 at 10.25.24.jpeg" alt="Respeito e dignidade na terceira idade" class="article-image">
+                        </div>
+                        
+                        <p>Muitas vezes esquecidos pela sociedade, os idosos merecem acolhimento, dignidade e cuidado. Por isso, meu trabalho vai além de processos e papéis: é sobre oferecer orientação completa sobre aposentadoria por idade, por tempo de contribuição, especial, pensão por morte, auxílios e revisões de benefícios, garantindo que cada cliente receba tudo a que tem direito.</p>
+                        
+                        <p><strong>Ver alguém conquistar seus benefícios e finalmente ter tranquilidade é uma alegria imensa, que renova meu propósito todos os dias.</strong> Acredito que o Direito Previdenciário não é apenas uma questão de leis, mas de justiça, cuidado e transformação de vidas.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/previdencia/WhatsApp Image 2025-10-03 at 10.25.26.jpeg" alt="Benefícios previdenciários - Conquista de direitos" class="article-image">
+                            <img src="artigos/previdencia/WhatsApp Image 2025-10-03 at 10.25.27.jpeg" alt="Orientação jurídica especializada" class="article-image">
+                        </div>
+                        
+                        <p>Se você deseja orientação ou tem dúvidas sobre aposentadoria e benefícios, estou aqui para ajudar com humanidade, experiência e dedicação, garantindo que cada etapa seja segura e clara.</p>
+                    </div>
+                    <button class="article-toggle">Ver Mais</button>
                 </article>
                 
-                <article class="article-card">
-                    <div class="article-date">08 Nov 2024</div>
-                    <h3>Aposentadoria Especial: Novos Critérios</h3>
-                    <p>Entenda as mudanças nos critérios para concessão da aposentadoria especial após a reforma previdenciária.</p>
-                    <a href="#" class="article-link">Ler Artigo</a>
+                <article class="article-card" data-article="tributario">
+                    <div class="article-date">15 Jan 2025</div>
+                    <h3>Direito Empresarial e Tributário: Unindo Experiência e Especialização para Apoiar Empresas</h3>
+                    <p class="article-summary">Análise das principais mudanças na legislação tributária e estratégias práticas para empresas e pessoas físicas em 2025.</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>Após concluir minha pós-graduação em Direito Empresarial na USP, percebi que podia oferecer muito mais aos empresários do que apenas soluções na área societária. O mundo empresarial é dinâmico, e questões como planejamento tributário, compliance e os impactos da Reforma Tributária se tornam cada vez mais estratégicas para quem deseja crescer com segurança.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.18.jpeg" alt="Direito Empresarial - Pós-graduação USP" class="article-image">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.18 (1).jpeg" alt="Planejamento tributário estratégico" class="article-image">
+                        </div>
+                        
+                        <p>Com anos de contato direto com grandes empresários da minha região, entendi que a advocacia pode ir além do jurídico tradicional: é possível ser parceiro estratégico, antecipando problemas, orientando sobre tributos e ajudando na expansão saudável das empresas.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.19.jpeg" alt="Parceria estratégica com empresários" class="article-image">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.19 (1).jpeg" alt="Orientação tributária empresarial" class="article-image">
+                        </div>
+                        
+                        <p>Essa visão me levou a unir o útil ao agradável: especializar-me em Direito Tributário e ampliar o escritório para atender empresas de forma completa. Hoje, oferecemos soluções integradas em Direito Empresarial e Tributário, com foco em resultados, eficiência e planejamento inteligente, garantindo que cada cliente esteja seguro diante das mudanças legislativas e fiscais.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.19 (2).jpeg" alt="Especialização em Direito Tributário" class="article-image">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.20.jpeg" alt="Soluções integradas empresariais" class="article-image">
+                            <img src="artigos/tributario/WhatsApp Image 2025-10-03 at 09.59.22.jpeg" alt="Planejamento inteligente e eficiência" class="article-image">
+                        </div>
+                        
+                        <p><strong>Nosso objetivo é claro:</strong> fortalecer empresas, proteger seus interesses e contribuir para o crescimento sustentável, com atenção personalizada, ética e conhecimento atualizado. Advogar nesse campo é mais do que atuar com leis; é acompanhar de perto o desenvolvimento dos negócios e ajudar empresários a prosperar com segurança e estratégia.</p>
+                    </div>
+                    <button class="article-toggle">Ver Mais</button>
                 </article>
                 
-                <article class="article-card">
-                    <div class="article-date">01 Nov 2024</div>
-                    <h3>Planejamento Tributário para 2025</h3>
-                    <p>Estratégias essenciais para otimizar a carga tributária da sua empresa no próximo exercício.</p>
-                    <a href="#" class="article-link">Ler Artigo</a>
+                <article class="article-card" data-article="congressos">
+                    <div class="article-date">10 Jan 2025</div>
+                    <h3>A Importância de se Atualizar e Participar de Congressos</h3>
+                    <p class="article-summary">A importância da educação continuada na advocacia: como congressos e especializações mantêm o advogado sempre atualizado.</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>No mundo do Direito, a atualização constante não é apenas um diferencial, mas uma necessidade. Leis, jurisprudências e normas mudam com frequência, e acompanhar essas mudanças garante eficiência, segurança e resultados de qualidade para os clientes.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 09.59.22.jpeg" alt="Congresso de Direito - Atualização Profissional" class="article-image">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 10.20.25.jpeg" alt="Participação em Congressos Jurídicos" class="article-image">
+                        </div>
+                        
+                        <p>Participar de congressos, seminários e workshops é uma das melhores formas de manter-se informado sobre as tendências do setor, novas práticas jurídicas e tecnologias aplicadas ao Direito. Mais do que aprendizado teórico, esses encontros permitem troca de experiências, networking com colegas e especialistas e acesso a estratégias inovadoras que fazem diferença no dia a dia do escritório.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 10.20.26.jpeg" alt="Networking em Eventos Jurídicos" class="article-image">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 10.25.24.jpeg" alt="Educação Continuada em Direito" class="article-image">
+                        </div>
+                        
+                        <p>A atualização contínua reflete comprometimento com a excelência técnica e respeito aos clientes. Cada conhecimento adquirido em congressos se transforma em soluções mais estratégicas, processos mais ágeis e orientações mais precisas, garantindo que cada pessoa ou empresa atendida tenha seus direitos protegidos da melhor forma possível.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 10.20.29.jpeg" alt="Aprendizado em Congressos" class="article-image">
+                            <img src="artigos/congresso/WhatsApp Image 2025-10-03 at 10.25.25.jpeg" alt="Desenvolvimento Profissional" class="article-image">
+                        </div>
+                        
+                        <p>Além disso, a busca pelo conhecimento reforça a paixão pelo que fazemos, mantém a motivação elevada e inspira novas ideias que fortalecem tanto a prática profissional quanto a missão de transformar vidas através do Direito.</p>
+                        
+                        <p><strong>Investir em atualização é, portanto, investir em resultados concretos para os clientes e em crescimento pessoal e profissional.</strong> Advogar com excelência exige mais do que estudo diário: exige estar conectado com o que há de mais moderno e eficiente na advocacia.</p>
+                    </div>
+                    <button class="article-toggle">Ver Mais</button>
+                </article>
+                
+                <article class="article-card" data-article="fe-advocacia">
+                    <div class="article-date">05 Jan 2025</div>
+                    <h3>Advocacia, Fé e Princípios que Transformam Vidas</h3>
+                    <p class="article-summary">Como a fé pode ser um diferencial na advocacia, guiando decisões éticas e fortalecendo a relação de confiança com os clientes.</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>Acredito que advogar é mais do que aplicar leis: é exercer uma missão que pode transformar vidas com justiça, ética e compaixão. Para mim, o Direito é um instrumento de serviço ao próximo, guiado pelos princípios que agradam a Deus e inspirados pelo exemplo de Jesus Cristo.</p>
+                        
+                        <div class="article-images">
+                            <img src="artigos/fe.jpeg" alt="Advocacia e Fé - Princípios Cristãos" class="article-image">
+                            <img src="artigos/fe1.jpeg" alt="Fé e Advocacia - Transformando Vidas" class="article-image">
+                        </div>
+                        
+                        <p>Seguir Jesus significa agir com integridade, honestidade e humanidade, colocando sempre o bem-estar do outro à frente de interesses pessoais. Cada cliente, cada processo e cada decisão são oportunidades de praticar o amor ao próximo e levar dignidade a quem mais precisa.</p>
+                        
+                        <p>Minha fé me ensina que resultado jurídico não é apenas números e papéis, mas também a forma como tratamos as pessoas, como acolhemos suas dores e celebramos suas conquistas. Advogar com propósito é honrar a Deus em cada atitude, buscando justiça, mas também misericórdia, empatia e cuidado.</p>
+                        
+                        <p><strong>Na minha prática diária, sigo princípios claros:</strong></p>
+                        <ul>
+                            <li><strong>Ética e Transparência:</strong> agir com clareza e retidão em todas as relações.</li>
+                            <li><strong>Comprometimento e Responsabilidade:</strong> cuidar do cliente como se fosse parte da minha própria família.</li>
+                            <li><strong>Humanização e Respeito:</strong> enxergar cada pessoa como única, com histórias e necessidades próprias.</li>
+                            <li><strong>Fé e Propósito:</strong> acreditar que meu trabalho é um instrumento de transformação e serviço.</li>
+                        </ul>
+                        
+                        <p>Quando unimos conhecimento jurídico e princípios cristãos, conseguimos não apenas defender direitos, mas também construir esperança, confiança e paz na vida das pessoas. Advogar assim é, para mim, uma forma de adorar a Deus através do trabalho, oferecendo justiça com amor, dedicação e fé.</p>
+                    </div>
+                    <button class="article-toggle">Ver Mais</button>
                 </article>
             </div>
         </div>
@@ -259,7 +514,7 @@
                     <h3 class="whatsapp-title">Atendimento Imediato</h3>
                     <p class="whatsapp-description">Clique no botão abaixo e fale diretamente conosco pelo WhatsApp. Estamos prontos para ajudá-lo!</p>
                     
-                    <a href="https://wa.me/55169931340113" target="_blank" class="whatsapp-button" aria-label="Falar no WhatsApp">
+                    <a href="https://wa.me/5516991118448" target="_blank" class="whatsapp-button" aria-label="Falar no WhatsApp">
                         <div class="whatsapp-button-content">
                             <i class="fab fa-whatsapp"></i>
                             <span>Falar no WhatsApp</span>
@@ -268,7 +523,7 @@
                     </a>
                     
                     <div class="whatsapp-info">
-                        <p><i class="fas fa-phone"></i> (16) 99134-0113</p>
+                        <p><i class="fas fa-phone"></i> (16) 99111-8448</p>
                         <p><i class="fas fa-clock"></i> Atendimento de Segunda à Sexta, 8h às 18h</p>
                     </div>
                 </div>
@@ -325,13 +580,15 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#atuacao">Minha Atuação</a></li>
+                        <li><a href="#missao-visao-valores">Nossos Pilares</a></li>
+                        <li><a href="#artigos">Artigos</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Contato</h4>
-                    <p><i class="fas fa-phone"></i> (16) 99134-0113</p>
+                    <p><i class="fas fa-phone"></i> (16) 99111-8448</p>
                     <p><i class="fas fa-envelope"></i> contato@thatianeleme.com.br</p>
                 </div>
             </div>
@@ -339,7 +596,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Dra. Thatiane Leme - Advocacia. Todos os direitos reservados. </p>
                 <p>Desenvolvido por <a href="https://www.instagram.com/lfinfo_sjb" target="_blank" rel="noopener">Lfinfo</a></p>
-                <p>OAB/SP 123.456</p>
+                <p>OAB/SP 431.971</p>
             </div>
         </div>
     </footer>

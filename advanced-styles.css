@@ -1,8 +1,8 @@
 /* ===== ADVANCED HERO ANIMATIONS ===== */
 .hero-badge {
     display: inline-block;
-    background: linear-gradient(135deg, rgba(214, 158, 46, 0.2), rgba(183, 121, 31, 0.2));
-    border: 1px solid rgba(214, 158, 46, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(229, 229, 229, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 8px 20px;
     border-radius: 25px;
     margin-bottom: 32px;
@@ -12,7 +12,7 @@
 }
 
 .badge-text {
-    color: var(--gold-accent);
+    color: var(--pure-white);
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -32,8 +32,8 @@
 }
 
 @keyframes badgeGlow {
-    0%, 100% { box-shadow: 0 0 20px rgba(214, 158, 46, 0.3); }
-    50% { box-shadow: 0 0 30px rgba(214, 158, 46, 0.5); }
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
 }
 
 @keyframes shine {
@@ -63,7 +63,7 @@
 .title-line:nth-child(3) { animation-delay: 0.9s; }
 
 .highlight-text {
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--pure-white), var(--copper-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,7 +77,7 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(90deg, var(--pure-white), var(--copper-accent));
     animation: underlineGrow 1s ease-out 1.2s forwards;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .subtitle-highlight {
-    color: var(--gold-accent);
+    color: var(--pure-white);
     font-weight: 600;
 }
 
@@ -134,7 +134,7 @@
 .stat-number {
     font-size: 36px;
     font-weight: 700;
-    color: var(--gold-accent);
+    color: var(--pure-white);
     font-family: var(--font-heading);
     margin-bottom: 8px;
 }
@@ -148,7 +148,7 @@
 
 /* ===== ENHANCED BUTTONS ===== */
 .btn-primary {
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--dark-gray), var(--accent-navy));
     position: relative;
     overflow: hidden;
 }
@@ -254,7 +254,7 @@
     transform: translateX(-50%);
     width: 20px;
     height: 120px;
-    background: linear-gradient(180deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(180deg, var(--medium-gray), var(--accent-navy));
     border-radius: 10px;
 }
 
@@ -265,7 +265,7 @@
     transform: translateX(-50%);
     width: 160px;
     height: 4px;
-    background: var(--gold-accent);
+    background: var(--medium-gray);
     border-radius: 2px;
     animation: scaleBalance 4s ease-in-out infinite;
 }
@@ -284,7 +284,7 @@
 .scale-plate {
     width: 40px;
     height: 8px;
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--medium-gray), var(--accent-navy));
     border-radius: 20px;
     position: absolute;
     bottom: 0;
@@ -297,7 +297,7 @@
     transform: translateX(-50%);
     width: 2px;
     height: 15px;
-    background: var(--gold-accent);
+    background: var(--medium-gray);
 }
 
 @keyframes scaleBalance {
@@ -328,7 +328,7 @@
 
 .floating-icon i {
     font-size: 24px;
-    color: var(--gold-accent);
+    color: var(--medium-gray);
 }
 
 .icon-1 {
@@ -360,57 +360,7 @@
     50% { transform: translateY(-15px) rotate(180deg); }
 }
 
-/* ===== SCROLL INDICATOR ===== */
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1s ease-out 3s forwards;
-}
 
-.scroll-text {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.scroll-arrow {
-    position: relative;
-    width: 2px;
-    margin: 0 auto;
-}
-
-.arrow-line {
-    width: 2px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.4);
-    animation: scrollPulse 2s ease-in-out infinite;
-}
-
-.arrow-head {
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-    transform: rotate(45deg);
-    margin: -4px auto 0;
-    animation: arrowBounce 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
-}
-
-@keyframes arrowBounce {
-    0%, 100% { transform: rotate(45deg) translateY(0); }
-    50% { transform: rotate(45deg) translateY(5px); }
-}
 
 /* ===== ENHANCED SERVICE CARDS ===== */
 .service-card {
@@ -431,7 +381,7 @@
     right: 0;
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--medium-gray), var(--accent-navy));
     opacity: 0.08;
     border-radius: 0 var(--border-radius-lg) 0 100px;
     transition: all var(--transition-medium);
@@ -457,7 +407,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--medium-gray), var(--accent-navy));
     border-radius: 50%;
     animation: iconPulse 3s ease-in-out infinite;
 }
@@ -473,7 +423,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--gold-accent);
+    border: 2px solid var(--medium-gray);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -513,7 +463,7 @@
 .feature-icon {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--medium-gray), var(--accent-navy));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -535,8 +485,8 @@
     position: relative;
     padding: 16px 32px;
     background: transparent;
-    border: 2px solid var(--gold-accent);
-    color: var(--gold-accent);
+    border: 2px solid var(--medium-gray);
+    color: var(--medium-gray);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
@@ -550,7 +500,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--gold-accent), var(--copper-accent));
+    background: linear-gradient(135deg, var(--medium-gray), var(--accent-navy));
     transition: left 0.4s ease;
     z-index: 1;
 }

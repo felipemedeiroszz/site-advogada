@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for scroll animations
-    const animatedElements = document.querySelectorAll('.service-card, .article-card, .about-content, .contact-content');
+    const animatedElements = document.querySelectorAll('.service-card, .article-card, .about-content, .contact-content, .mvv-card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Validate form
             if (validateForm(formObject)) {
                 // Build WhatsApp Click-to-Chat URL in requested format
-                const numero = '5516991340113';
+                const numero = '5516991118448';
                 const partes = [
                     formObject.nomecompleto || '',
                     formObject.email || '',
