@@ -332,18 +332,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Define 12 messages (Portuguese examples; adjust as needed)
         const messages = [
-            'Olá! Preciso de ajuda jurídica',
-            'Tenho dúvidas sobre aposentadoria',
+            'Olá! Preciso de ajuda com aposentadoria',
+            'Tenho dúvidas sobre meus direitos previdenciários',
             'Como funciona a revisão de benefícios?',
-            'Fui autuado e preciso de orientação',
+            'Fui autuado pela Receita Federal',
             'É possível recuperar créditos tributários?',
-            'Quais documentos preciso enviar?',
-            'Muito obrigada pelo atendimento!',
-            'Excelente advogada!',
-            'Resolveu meu caso rapidamente',
-            'Atendimento ágil e profissional',
-            'Recomendo o escritório',
-            'Podemos marcar uma consulta?'
+            'Preciso de orientação trabalhista',
+            'Muito obrigada pelo excelente atendimento!',
+            'Dra. Thatiane é uma advogada excepcional!',
+            'Resolveu meu caso em tempo recorde',
+            'Atendimento humanizado e profissional',
+            'Recomendo de olhos fechados!',
+            'Consegui minha aposentadoria! Obrigada!'
         ];
 
         // Split into 4 groups of 3
